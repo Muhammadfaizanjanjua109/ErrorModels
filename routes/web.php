@@ -58,6 +58,7 @@ Route::get('/admin','App\Http\Controllers\Admin@index')->name('admin')->middlewa
 //comments
 
 Route::prefix('comments')->group(function () {
-    Route::get('comments/create','App\Http\Controller\ReviewController@create')->name('Create');
-    Route::Post('comments/create','App\Http\Controller\ReviewController@store')->name('Store');
+    Route::get('/Index','App\Http\Controllers\ReviewController@index')->name('comments.Index');
+    Route::get('/create','App\Http\Controllers\ReviewController@create')->name('comments.Create');
+    Route::Post('/store/{id}','App\Http\Controllers\ReviewController@store')->name('comments.Store');
 });

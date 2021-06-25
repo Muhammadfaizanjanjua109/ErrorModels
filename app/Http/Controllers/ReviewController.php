@@ -17,7 +17,7 @@ class ReviewController extends Controller
     {
         //
         $comment=review::all();
-        return view('review.index',compact('$comment'));
+        return view('review.Commentsform',compact('$comment'));
     }
 
     /**
@@ -38,13 +38,15 @@ class ReviewController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request,$id)
     {
         //
+
         $comment=New Review;
+        $comment->blogs_id=$request->id;
         $comment->comment=$request->comment;
         $comment->save();
-        redirect('/');
+        return redirect()->back();
     }
 
     /**
