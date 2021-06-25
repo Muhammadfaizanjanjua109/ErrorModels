@@ -15,15 +15,12 @@
 </form>
 <h1>{{ $blog->tittle }}</h1>
 <p>{{ $blog->body }}</p>
-<h1>Reviews Or COmments</h1>
-<h1>{{$blog->Reviews->comment }};
-@if($blog->Review)
 
-@forelse ()
-    <h1>{{$blogs->review->comment}}</h1>;
+@forelse ($blog->review as $rev)
+    <h1 style="color: red">{{$rev['comment']}}</h1>
 @empty
     <h1>No comment Till not</h1>
-    @endempty
+
 @endforelse
 
 @yield('comments');
