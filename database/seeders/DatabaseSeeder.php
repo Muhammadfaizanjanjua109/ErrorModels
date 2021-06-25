@@ -15,9 +15,9 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
         // blogs::factory(10)->create();
 
-        $this->call(userroletable::class);
+        // $this->call(userroletable::class);
         $this->call(ReviewSeeder::class);
-        \App\Models\blogs::factory(10)->create();
+        // \App\Models\blogs::factory(10)->create();
 
     }
 }

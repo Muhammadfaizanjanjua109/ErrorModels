@@ -18,13 +18,13 @@
 <h1>Reviews Or COmments</h1>
 <h1>{{$blog->Reviews->comment }};
 @if($blog->Review)
-{{--
-@forelse ( $blog->Review as $comments )
-    <h1>{{$comments['comment'] }};
+
+@forelse ()
+    <h1>{{$blogs->review->comment}}</h1>;
 @empty
     <h1>No comment Till not</h1>
     @endempty
-@endforelse --}}
+@endforelse
 
 @yield('comments');
 <a style="color:green" href="/showblogs">Go Back to see All blogs</a>

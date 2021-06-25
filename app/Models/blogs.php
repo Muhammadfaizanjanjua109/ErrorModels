@@ -21,7 +21,7 @@ class blogs extends Model
 
     public function review()
     {
-      return  $this->hasMany(review::class);
+      return  $this->hasMany(Review::class);
     }
 
 }

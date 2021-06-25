@@ -17,8 +17,8 @@ class ReviewSeeder extends Seeder
     public function run()
     {
         $admin=blogs::first();
-        $admin->Review->comment='loream ipsuma Comment';
-        $admin->Review->blog_id=1;
+        $admin->review->comment='loream ipsuma Comment';
+        $admin->review->blog_id=1;
         $admin->save();
     }
 }
